@@ -1,13 +1,17 @@
 // imports
 import express, { Express, Request, Response } from "express"
 
+
 // variables
 const app: Express = express()
+const morgan = require("morgan")
 let port = 3000
 
 // use
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
+app.use(morgan('dev'))
+
 
 // set
 app.set("view engine", "ejs")
