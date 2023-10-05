@@ -10,7 +10,7 @@ let port = 3000
 // use
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
-app.use(morgan('dev'))
+app.use(morgan('tiny'))
 
 
 // set
